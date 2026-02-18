@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Fresh | The Ultimate Dining Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --midnight: #0B0E11;
+            --deep-space: #161B22;
+            --electric-blue: #7DF9FF;
+            --soft-blue: #A0E9FF;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--midnight);
+            color: #E0E0E0;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
+
+        /* Navigation */
+        .navbar {
+            padding: 20px 0;
+            background: rgba(11, 14, 17, 0.98);
+            border-bottom: 1px solid var(--glass);
+        }
+        .nav-link { 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            font-size: 0.8rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .nav-link:hover { color: var(--electric-blue) !important; }
+
+        /* Full Screen Hero */
+        .hero-big {
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(11,14,17,0.3), var(--midnight)),
+                        url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: white;
+            line-height: 1;
+        }
+
+        /* Large Feature Section */
+        .feature-box {
+            padding: 100px 0;
+            background: var(--deep-space);
+        }
+
+        .img-zoom-container {
+            overflow: hidden;
+            border: 1px solid var(--glass);
+        }
+        .img-zoom-container img {
+            transition: transform 1.5s ease;
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Menu Grid */
+        .menu-category {
+            border-bottom: 1px solid var(--glass);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: var(--soft-blue);
+            letter-spacing: 4px;
+        }
+
+        .price-tag {
+            border: 1px solid var(--soft-blue);
+            padding: 2px 10px;
+            font-size: 0.9rem;
+            color: var(--soft-blue);
+        }
+
+        /* The "Big Site" CTA */
+        .cta-strip {
+            background: var(--soft-blue);
+            color: var(--midnight);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .btn-dark-elegant {
+            background: var(--midnight);
+            color: var(--soft-blue);
+            border-radius: 0;
+            padding: 15px 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid var(--midnight);
+        }
+
+        /* Footer Grid */
+        .footer-big {
+            background: #050505;
+            padding: 80px 0 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">MAMA <span style="color:var(--soft-blue)">FRESH</span></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">The Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reserve">Reservations</a></li>
+                </ul>
+                <a href="#reserve" class="btn btn-outline-info btn-sm rounded-0 px-4">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-big">
+        <div class="container">
+            <h1 class="hero-title mb-4">Elegance<br>Redefined.</h1>
+            <p class="lead mb-5 opacity-75">Welcome to Mama Fresh — Where the finest ingredients meet bold culinary art.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#menu" class="btn btn-dark-elegant">Explore Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="feature-box">
+        <div class="container">
+            <div class="row align-items: center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="img-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1550966841-3ee7adac1661?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Chef">
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <h6 class="text-info mb-3">SINCE 2026</h6>
+                    <h2 class="display-4 mb-4">A Legacy of <br>Organic Purity</h2>
+                    <p class="mb-4">Mama Fresh isn't just a name; it's a promise. We source every herb, vegetable, and cut of meat from local artisans who share our commitment to the earth.</p>
+                    <p class="fst-italic border-start border-info ps-3">"Cooking is an act of love, and we love what we do." — Head Chef</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-3">Seasonal Selections</h2>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h4 class="menu-category">STARTERS</h4>
+                    <div class="mb-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5>Blue Crab Cakes</h5>
+                            <p class="small opacity-50">With spicy aioli and pickled radish</p>
+                        </div>
+                        <span class="price-tag">$24</span>
+                    </div>
+                    <div class="mb-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5>Burrata & Fig</h5>
+                            <p class="small opacity-50">Balsamic glaze, toasted walnuts</p>
+                        </div>
+                        <span class="price-tag">$19</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="menu-category">MAIN COURSES</h4>
+                    <div class="mb-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5>Wagyu Beef Filet</h5>
+                            <p class="small opacity-50">Truffle mash, red wine reduction</p>
+                        </div>
+                        <span class="price-tag">$65</span>
+                    </div>
+                    <div class="mb-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5>Atlantic Lobster Tail</h5>
+                            <p class="small opacity-50">Garlic herb butter, saffron rice</p>
+                        </div>
+                        <span class="price-tag">$58</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-md-3 col-6 img-zoom-container"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80" class="img-fluid" alt=""></div>
+            <div class="col-md-3 col-6 img-zoom-container"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80" class="img-fluid" alt=""></div>
+            <div class="col-md-3 col-6 img-zoom-container"><img src="https://images.unsplash.com/photo-1550966841-3ee7adac1661?auto=format&fit=crop&w=500&q=80" class="img-fluid" alt=""></div>
+            <div class="col-md-3 col-6 img-zoom-container"><img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=500&q=80" class="img-fluid" alt=""></div>
+        </div>
+    </section>
+
+    <section id="reserve" class="cta-strip">
+        <div class="container">
+            <h2 class="display-5 mb-4">Ready to Join Us?</h2>
+            <p class="mb-5 fs-5">Reservations are highly recommended for weekend dining.</p>
+            <button class="btn btn-dark-elegant btn-lg">Reserve Your Table Online</button>
+        </div>
+    </section>
+
+    <footer class="footer-big">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-4">MAMA FRESH</h5>
+                    <p class="small opacity-50">The pinnacle of elegant organic dining. Join us for an unforgettable evening of taste and atmosphere.</p>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <h5 class="mb-4">HOURS</h5>
+                    <p class="small">Mon-Thu: 5pm — 10pm</p>
+                    <p class="small">Fri-Sun: 4pm — 11pm</p>
+                </div>
+                <div class="col-md-4 mb-4 text-end">
+                    <h5 class="mb-4">LOCATION</h5>
+                    <p class="small">123 Light Blue District</p>
+                    <p class="small">Lagos, Nigeria</p>
+                    <p class="small">contact@eatatmamafresh.com</p>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <p class="text-center small opacity-50">© 2026 Mama Fresh Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
